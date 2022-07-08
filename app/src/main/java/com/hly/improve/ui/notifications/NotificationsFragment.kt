@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hly.improve.MyAdapter
 import com.hly.improve.databinding.FragmentNotificationsBinding
 
 class NotificationsFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.hly.improve
+package com.hly.improve.view
 
 import android.content.Context
 import android.graphics.Canvas

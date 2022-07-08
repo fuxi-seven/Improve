@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <com.hly.improve.DrawView
+    <com.hly.improve.view.DrawView
         android:id="@+id/drawView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
@@ -28,7 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.hly.improve.PPCircle
+    <com.hly.improve.view.PPCircle
         android:id="@+id/ppCircle"
         android:layout_width="300dp"
         android:layout_height="300dp"

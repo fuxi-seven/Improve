@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".AppWidget"
+        <receiver android:name=".widget.AppWidget"
             android:exported="false">
             <intent-filter>
                 <!--点击按钮-->
@@ -38,7 +38,7 @@
         </receiver>
 
         <service
-            android:name=".MyService"
+            android:name=".widget.MyService"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.hly.improve.action.MyService" />

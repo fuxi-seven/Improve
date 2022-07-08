@@ -1,9 +1,10 @@
-package com.hly.improve
+package com.hly.improve.view
 
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.view.View
+import com.hly.improve.R
 import java.text.DecimalFormat
 import java.util.*
 import kotlin.math.ceil

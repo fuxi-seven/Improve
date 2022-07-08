@@ -1,4 +1,4 @@
-package com.hly.improve
+package com.hly.improve.widget
 
 import android.app.IntentService
 import android.content.Intent

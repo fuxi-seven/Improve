@@ -1,4 +1,4 @@
-package com.hly.improve
+package com.hly.improve.widget
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -10,6 +10,7 @@ import android.content.Intent
 import android.text.TextUtils
 import android.util.Log
 import android.widget.RemoteViews
+import com.hly.improve.R
 
 class AppWidget : AppWidgetProvider() {
 

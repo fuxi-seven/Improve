@@ -1,4 +1,4 @@
-package com.hly.improve
+package com.hly.improve.ui.notifications
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.hly.improve.R
 
 class MyAdapter(val context: Context, list: ArrayList<String>) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
