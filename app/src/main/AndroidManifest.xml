@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hly.improve">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_home"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_home"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Improve">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".AppWidget"
+            android:exported="false">
+            <intent-filter>
+                <!--点击按钮-->
+                <action android:name="action_button" />
+            </intent-filter>
+            <intent-filter>
+                <!--更新数据到textview-->
+                <action android:name="action_update" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget" />
+        </receiver>
+
+        <service
+            android:name=".MyService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.hly.improve.action.MyService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
