@@ -1,5 +1,6 @@
 package com.hly.improve.ui.dashboard
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.hly.improve.ComposeActivity
 import com.hly.improve.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -33,6 +35,7 @@ class DashboardFragment : Fragment() {
             textView.text = it
         }
         initData()
+        binding.jumpBtn.setOnClickListener { jumpToComposeActivity() }
         return root
     }
 
@@ -45,5 +48,10 @@ class DashboardFragment : Fragment() {
         val numbers = intArrayOf(45, 30, 25)
         val names = arrayOf("dog", "pig", "cat")
         binding.pieView.setData(numbers, names)
+    }
+
+    private fun jumpToComposeActivity() {
+        val intent = Intent(this.context, ComposeActivity::class.java)
+        startActivity(intent)
     }
 }

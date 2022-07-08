@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
+    <Button
+        android:id="@+id/jump_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到Compose Activity"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        android:textSize="16sp" />
+
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="match_parent"

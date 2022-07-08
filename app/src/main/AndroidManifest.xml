@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hly.improve">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_home"
@@ -9,6 +11,11 @@
         android:roundIcon="@drawable/ic_home"
         android:supportsRtl="true"
         android:theme="@style/Theme.Improve">
+        <activity
+            android:name=".ComposeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_compose"
+            android:theme="@style/Theme.Improve" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -18,14 +25,15 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".widget.AppWidget"
+        <receiver
+            android:name=".widget.AppWidget"
             android:exported="false">
             <intent-filter>
-                <!--点击按钮-->
+                <!-- 点击按钮 -->
                 <action android:name="action_button" />
             </intent-filter>
             <intent-filter>
-                <!--更新数据到textview-->
+                <!-- 更新数据到textview -->
                 <action android:name="action_update" />
             </intent-filter>
             <intent-filter>
