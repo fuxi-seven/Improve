@@ -22,4 +22,10 @@
         android:name="com.hly.improve.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_motionlayout"
+        android:name="com.hly.improve.ui.motion.MotionLayoutFragment"
+        android:label="@string/title_motionlayout"
+        tools:layout="@layout/fragment_motion" />
 </navigation>

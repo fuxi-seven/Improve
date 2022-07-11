@@ -25,6 +25,12 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".motion.AnimeActivity">
+        </activity>
+        <activity android:name=".motion.CardMotionActivity">
+        </activity>
+        <activity android:name=".motion.CarMotionActivity">
+        </activity>
         <receiver
             android:name=".widget.AppWidget"
             android:exported="false">
