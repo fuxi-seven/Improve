@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.absolutePadding
 import androidx.compose.material.Text
 import androidx.compose.material.Button
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
@@ -22,10 +23,12 @@ class HomeWidget {
                 verticalArrangement = Arrangement.Top,
                 modifier = Modifier.absolutePadding(20.dp, 20.dp, 20.dp, 20.dp)
             ) {
-                Text(text = "风景列表展示", textAlign = TextAlign.Center)
+                Text(text = "风景列表展示", textAlign = TextAlign.Center, modifier = Modifier.align(alignment = Alignment.CenterHorizontally))
                 val current = LocalContext.current
                 Button(
-                    onClick = { Toast.makeText(current, "哈哈哈哈", Toast.LENGTH_SHORT).show() }) {
+                    onClick = { Toast.makeText(current, "哈哈哈哈", Toast.LENGTH_SHORT).show() },
+                    //水平居中显示
+                    modifier = Modifier.align(alignment = Alignment.CenterHorizontally)) {
                     Text("点我")
                 }
                 //下面就是列表布局的数据

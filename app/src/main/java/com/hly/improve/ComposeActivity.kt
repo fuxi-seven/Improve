@@ -9,6 +9,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -80,6 +81,7 @@ private fun ImageItemShow(transformations: Transformation) {
                 crossfade(true)//淡出效果
                 transformations(transformations)//圆角效果
             }),
+        contentScale = ContentScale.Inside,
         contentDescription = null
     )
     Spacer(modifier = Modifier.padding(5.dp))
