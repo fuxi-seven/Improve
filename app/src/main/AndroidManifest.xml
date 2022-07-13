@@ -25,6 +25,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".mvi.ui.main.view.MviActivity">
+        </activity>
         <activity android:name=".motion.AnimeActivity">
         </activity>
         <activity android:name=".motion.CardMotionActivity">
