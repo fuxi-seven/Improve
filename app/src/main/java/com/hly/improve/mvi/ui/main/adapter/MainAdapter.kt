@@ -1,6 +1,5 @@
 package com.hly.improve.mvi.ui.main.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +14,6 @@ class MainAdapter(private val users: ArrayList<User>) : RecyclerView.Adapter<Mai
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(user: User) {
-            Log.d("Seven", user.toString())
             itemView.findViewById<AppCompatTextView>(R.id.textViewUserName).text = user.firstName
             itemView.findViewById<AppCompatTextView>(R.id.textViewUserEmail).text = user.email
             Glide.with(itemView.findViewById<ImageView>(R.id.imageViewAvatar).context)
