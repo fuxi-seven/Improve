@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Android与Js交互</title>
+</head>
+<body>
+
+<script type="text/javascript">
+            //无参方法
+            function clickJS(){
+                document.getElementById("zi").innerHTML = "Android调用了JS代码"
+            }
+            //有参方法
+            function clickJSTwo(x){
+                document.getElementById("zi").innerHTML = x
+            }
+            //与Android交互的方法
+            function callAndroid(){
+                //用android.调用映射的对象,这里的android是addJavascriptInterface()的第二个参数
+                android.jsAndroid("我是JS,我调用了Android的方法")
+            }
+            //使用WebViewClient()的shouldOverrideUrlLoading ()方法拦截Url调用Android代码
+            function webViewCallAndroid() {
+                //定义url协议
+                document.location = "js://webview?name=zhangsan&age=20&sex=0"
+            }
+            //使用WebChromeClient的onJsAlert()、onJsConfirm()、onJsPrompt（）拦截JS中的对话框alert()/confirm()/prompt()
+            function webChromeCallAndroid(){
+                // 定义一个带输入框的弹窗
+                var x = prompt("我又调用了Android的方法");
+                alert("我是JS"+x)
+            }
+
+</script>
+
+<button type="button" onclick="clickAndroid()">直接调用Android</button>
+<br>
+<p></p>
+<button type="button" onclick="webViewCallAndroid()">拦截Url调用Android</button>
+<br>
+<p></p>
+<button type="button" onclick="webChromeCallAndroid()">onJsxx()拦截调用Android</button>
+
+<p style="color:#0000FF" id="zi"></p>
+
+<table border=1 bordercolor=red cellspacing=0 align="center" width=300px cellpadding="0"
+       height=180px>
+    <tr align="center">
+        <td colspan="3">周一菜谱</td>
+    </tr>
+    <tr align="center">
+        <td rowspan="2">素菜</td>
+        <td>青菜</td>
+        <td>土豆</td>
+    </tr>
+    <tr align="center">
+        <td>豆腐</td>
+        <td>白菜</td>
+    </tr>
+    <tr align="center">
+        <td rowspan="2">荤菜</td>
+        <td>肉丝</td>
+        <td>大虾</td>
+    </tr>
+    <tr align="center">
+        <td>海参</td>
+        <td>鲍鱼</td>
+    </tr>
+</table>
+<p style="font-size:48px">
+    &#128512; &#128516; &#128525; &#128151; &#128514;
+</p>
+</body>
+</html>

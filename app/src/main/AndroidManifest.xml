@@ -33,6 +33,8 @@
         </activity>
         <activity android:name=".motion.CarMotionActivity">
         </activity>
+        <activity android:name=".AndroidJsActivity">
+        </activity>
         <receiver
             android:name=".widget.AppWidget"
             android:exported="false">

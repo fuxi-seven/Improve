@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.hly.improve.AndroidJsActivity
 import com.hly.improve.ComposeActivity
 import com.hly.improve.databinding.FragmentDashboardBinding
 import com.hly.improve.mvi.ui.main.view.MviActivity
@@ -38,6 +39,7 @@ class DashboardFragment : Fragment() {
         initData()
         binding.jumpBtn.setOnClickListener { jumpToComposeActivity() }
         binding.mviBtn.setOnClickListener { jumpToMviActivity() }
+        binding.jsBtn.setOnClickListener { jumpToAndroidJsActivity() }
         return root
     }
 
@@ -59,6 +61,11 @@ class DashboardFragment : Fragment() {
 
     private fun jumpToMviActivity() {
         val intent = Intent(this.context, MviActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun jumpToAndroidJsActivity() {
+        val intent = Intent(this.context, AndroidJsActivity::class.java)
         startActivity(intent)
     }
 }

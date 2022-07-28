@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/android_js"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="    JavaScript是一种基于对象和事件驱动的脚本语言，它可以嵌入到HTML网页内，让网页具有与用户互动的功能，并且可以动态操作网页内容，发送请求到服务器，并接收和处理服务器返回的内容。" />
+
+    <TextView
+        android:id="@+id/android_js_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="    JS脚本代码必须放置在script标签之间。script标签的type属性表示脚本语言是javascript。script标签可放置在HTML 页面的body或者head标签内。" />
+
+    <Button
+        android:id="@+id/android_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调用JS代码" />
+
+    <WebView
+        android:id="@+id/android_web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </WebView>
+</LinearLayout>
