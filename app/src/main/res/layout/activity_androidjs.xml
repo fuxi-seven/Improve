@@ -22,10 +22,12 @@
         android:id="@+id/android_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="调用JS代码" />
 
     <WebView
         android:id="@+id/android_web"
+        android:layerType="software"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </WebView>

@@ -30,6 +30,7 @@ class AndroidJsActivity : AppCompatActivity() {
         //设置允许JS中的弹窗
         settings.javaScriptCanOpenWindowsAutomatically = true
 
+        binding.androidWeb.setBackgroundColor(this.getColor(R.color.webBg))
         //然后加载JS代码
         binding.androidWeb.loadUrl("file:///android_asset/index.html")
         //调用JS无参方法
