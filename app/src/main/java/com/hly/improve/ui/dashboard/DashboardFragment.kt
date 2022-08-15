@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.hly.improve.AndroidJsActivity
 import com.hly.improve.ComposeActivity
+import com.hly.improve.NavigationActivity
 import com.hly.improve.databinding.FragmentDashboardBinding
 import com.hly.improve.mvi.ui.main.view.MviActivity
 
@@ -40,6 +41,7 @@ class DashboardFragment : Fragment() {
         binding.jumpBtn.setOnClickListener { jumpToComposeActivity() }
         binding.mviBtn.setOnClickListener { jumpToMviActivity() }
         binding.jsBtn.setOnClickListener { jumpToAndroidJsActivity() }
+        binding.naviBtn.setOnClickListener { jumpToNavigationActivity() }
         return root
     }
 
@@ -66,6 +68,11 @@ class DashboardFragment : Fragment() {
 
     private fun jumpToAndroidJsActivity() {
         val intent = Intent(this.context, AndroidJsActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun jumpToNavigationActivity() {
+        val intent = Intent(this.context, NavigationActivity::class.java)
         startActivity(intent)
     }
 }

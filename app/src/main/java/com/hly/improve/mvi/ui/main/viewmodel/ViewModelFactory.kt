@@ -7,7 +7,7 @@ import com.hly.improve.mvi.data.repository.MainRepository
 
 class ViewModelFactory(private val apiService: ApiService) : ViewModelProvider.Factory {
 
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             return MainViewModel(MainRepository(apiService)) as T
         }

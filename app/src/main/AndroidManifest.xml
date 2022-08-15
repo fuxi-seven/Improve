@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hly.improve">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +11,11 @@
         android:roundIcon="@drawable/ic_home"
         android:supportsRtl="true"
         android:theme="@style/Theme.Improve">
+        <activity
+            android:name=".NavigationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/Theme.Improve" />
         <activity
             android:name=".ComposeActivity"
             android:exported="false"
@@ -21,28 +26,26 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".mvi.ui.main.view.MviActivity"></activity>
+        <activity android:name=".motion.AnimeActivity"></activity>
+        <activity android:name=".motion.CardMotionActivity"></activity>
+        <activity android:name=".motion.CarMotionActivity"></activity>
+        <activity android:name=".AndroidJsActivity"></activity>
 
-        <activity android:name=".mvi.ui.main.view.MviActivity">
-        </activity>
-        <activity android:name=".motion.AnimeActivity">
-        </activity>
-        <activity android:name=".motion.CardMotionActivity">
-        </activity>
-        <activity android:name=".motion.CarMotionActivity">
-        </activity>
-        <activity android:name=".AndroidJsActivity">
-        </activity>
         <receiver
             android:name=".widget.AppWidget"
             android:exported="false">
             <intent-filter>
+
                 <!-- 点击按钮 -->
                 <action android:name="action_button" />
             </intent-filter>
             <intent-filter>
+
                 <!-- 更新数据到textview -->
                 <action android:name="action_update" />
             </intent-filter>
