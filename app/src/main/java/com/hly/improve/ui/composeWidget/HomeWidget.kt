@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.hly.improve.showContraintLayout
 import com.hly.improve.ui.composeWidget.MessageWidget.Companion.MessageList
 
 class HomeWidget {
@@ -31,6 +32,7 @@ class HomeWidget {
                     modifier = Modifier.align(alignment = Alignment.CenterHorizontally)) {
                     Text("点我")
                 }
+                showContraintLayout()
                 //下面就是列表布局的数据
                 MessageList(
                     listOf(
