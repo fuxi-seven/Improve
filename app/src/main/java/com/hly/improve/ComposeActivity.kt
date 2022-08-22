@@ -97,7 +97,7 @@ private fun ImageItemShow(transformations: Transformation) {
 }
 
 @Composable
-fun showContraintLayout() {
+fun showConstraintLayout() {
     ConstraintLayout(modifier = Modifier
         .fillMaxWidth()
         .height(80.dp)
