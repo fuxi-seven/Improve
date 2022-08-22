@@ -35,6 +35,7 @@
         <activity android:name=".motion.CardMotionActivity"></activity>
         <activity android:name=".motion.CarMotionActivity"></activity>
         <activity android:name=".AndroidJsActivity"></activity>
+        <activity android:name=".KeyguardActivity"></activity>
 
         <receiver
             android:name=".widget.AppWidget"

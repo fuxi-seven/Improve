@@ -1,15 +1,21 @@
+@file:Suppress("DEPRECATION")
+
 package com.hly.improve.ui.dashboard
 
+import android.app.KeyguardManager
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.hly.improve.AndroidJsActivity
 import com.hly.improve.ComposeActivity
+import com.hly.improve.KeyguardActivity
 import com.hly.improve.NavigationActivity
 import com.hly.improve.databinding.FragmentDashboardBinding
 import com.hly.improve.mvi.ui.main.view.MviActivity
@@ -42,6 +48,7 @@ class DashboardFragment : Fragment() {
         binding.mviBtn.setOnClickListener { jumpToMviActivity() }
         binding.jsBtn.setOnClickListener { jumpToAndroidJsActivity() }
         binding.naviBtn.setOnClickListener { jumpToNavigationActivity() }
+        binding.keguardBtn.setOnClickListener { jumpToKeyguardActivity() }
         return root
     }
 
@@ -73,6 +80,11 @@ class DashboardFragment : Fragment() {
 
     private fun jumpToNavigationActivity() {
         val intent = Intent(this.context, NavigationActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun jumpToKeyguardActivity() {
+        val intent =  Intent(this.context, KeyguardActivity::class.java)
         startActivity(intent)
     }
 }
